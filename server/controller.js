@@ -1,7 +1,7 @@
 module.exports = {
   getAllHouses: (req, res, next) => {
     const dbInstance = req.app.get("db");
-
+    // console.log(dbInstance);
     dbInstance
       .get_all()
       .then(houses => res.status(200).send(houses))
